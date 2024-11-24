@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "identification": "11111111111",
+      "password": "123456",
+      "firstName": "Robson",
+      "lastName": "Vasconcellos",
+      "occupation": ""
+    },
+    {
+      "id": 2,
+      "identification": "22222222222",
+      "password": "123456",
+      "firstName": "Maria",
+      "lastName": "Rosa de Aragão e Cerqueira",
+      "occupation": ""
+    }
+  ]
+}

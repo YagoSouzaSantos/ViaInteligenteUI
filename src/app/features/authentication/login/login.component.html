@@ -1,0 +1,7 @@
+<mat-card>
+  <div class="title-area">
+    <img matCardImage src="images/via-inteligente-logo.jpg">
+    <h2>Bem-vindo!</h2>
+    <app-login-form [loginStatus]="loginService.status()" (login)="onLogin($event)" />
+  </div>
+</mat-card>

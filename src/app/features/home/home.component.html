@@ -1,0 +1,29 @@
+<mat-toolbar>
+  <button mat-icon-button class="example-icon" (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Via Inteligente</span>
+  <span class="spacer"></span>
+
+  <button mat-flat-button (click)="logout()">Sair</button>
+</mat-toolbar>
+
+<mat-drawer-container class="container" autosize>
+
+  <mat-drawer #drawer class="sidenav" mode="side" opened>
+    <button mat-button routerLink="analysis/notifications">Área de análise</button>
+    <button mat-button routerLink="analysis/history">Histórico de eventos</button>
+    <button mat-button routerLink="reports">Relatórios</button>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <div class="sidenav-content">
+        <router-outlet />
+    </div>
+
+  </mat-drawer-content>
+
+</mat-drawer-container>
+
+
+

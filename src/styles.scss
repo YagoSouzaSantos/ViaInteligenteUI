@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+
+@use '@angular/material' as mat;
+@include mat.core();
+
+// Define the theme object.
+$ViaInteligenteUI-theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$violet-palette,
+    tertiary: mat.$blue-palette,
+  ),
+  density: (
+    scale: 0,
+  )
+));
+
+:root {
+  @include mat.all-component-themes($ViaInteligenteUI-theme);
+}
+html, body { height: 100%; }
+body {
+  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+  min-height: 100vh;
+}
+.snackbar {
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+}
+.snackbar * {
+  background-color: transparent !important;
+}
+
+.error-snackbar {
+  background: rgb(202, 68, 68);
+}
+.success-snackbar {
+  background: rgb(0, 172, 51);
+}
+.alert-snackbar {
+  background: rgb(219, 147, 14);
+}

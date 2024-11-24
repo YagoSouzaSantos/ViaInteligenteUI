@@ -1,0 +1,41 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.mat-toolbar {
+  background: rgba(54, 15, 154, 1);
+  color: #fff;
+
+  .mat-mdc-icon-button {
+    color: #fff;
+  }
+  .mat-mdc-unelevated-button:not(:disabled) {
+    background-color: transparent;
+  }
+}
+
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0;
+
+  height: 100vh;
+
+  border: none;
+  border-right: 2px solid rgba(54, 15, 154, 1);
+
+  button {
+    width: 100%;
+    border-radius: 0;
+    color: rgb(41, 41, 41);
+  }
+}
+
+.container {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.sidenav-content {
+  padding: 19px;
+}
