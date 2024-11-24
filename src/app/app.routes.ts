@@ -8,6 +8,7 @@ import { NotificationsComponent } from './features/analysis/notifications/notifi
 import { HomeComponent } from './features/home/home.component';
 import { NgModule } from '@angular/core';
 import { isAuthenticatedGuard } from './core/security/auth.guard';
+import { DetailsComponent } from './features/analysis/notifications/details/details.component';
 
 export const routes: Routes = [
   {
@@ -27,6 +28,8 @@ export const routes: Routes = [
             path: 'notifications',
             component: NotificationsComponent
           },
+          { path: 'notification/:id', component: DetailsComponent },
+          
           {
             path: 'history',
             component: HistoryComponent
@@ -44,3 +47,8 @@ export const routes: Routes = [
     component: NotFoundComponent
   }
 ];
+@NgModule({
+  imports: [RouterModule.forRoot(routes, { useHash: true })], // Habilite o modo History API (sem # na URL)
+  exports: [RouterModule]
+})
+export class AppRoutingModule {}

@@ -1,14 +1,18 @@
-<div class="notification-container">
-    <mat-card *ngFor="let notification of notifications" class="notification-card">
+<div *ngFor="let notification of notifications" class="notification-card" (click)="goToDetails(notification.id)">
+    <mat-card>
       <mat-card-header>
-        <mat-icon *ngIf="notification.status === 'Ativo'" color="primary">check_circle</mat-icon>
-        <mat-icon *ngIf="notification.status === 'Resolvido'" color="accent">done_all</mat-icon>
-        <mat-icon *ngIf="notification.status === 'Pendente'" color="warn">error</mat-icon>
-        <mat-card-title>Status: {{ notification.status }}</mat-card-title>
+        <div class="status-container">
+          <mat-icon *ngIf="notification.status === 'Ativo'" class="status-icon">warning</mat-icon>
+          <mat-icon *ngIf="notification.status === 'Resolvido'" class="status-icon">check_circle</mat-icon>
+          <mat-icon *ngIf="notification.status === 'Pendente'" class="status-icon">hourglass_empty</mat-icon>
+          <mat-card-title>Status: {{ notification.status }}</mat-card-title>
+        </div>
       </mat-card-header>
       <mat-card-content>
-        <p><strong>Endereço:</strong> {{ notification.endereco }}</p>
+        <p>Endereço: {{ notification.endereco }}</p>
       </mat-card-content>
     </mat-card>
   </div>
+  
+  
   
