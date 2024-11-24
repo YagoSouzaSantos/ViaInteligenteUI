@@ -1,1 +1,14 @@
-<p>notifications works!</p>
+<div class="notification-container">
+    <mat-card *ngFor="let notification of notifications" class="notification-card">
+      <mat-card-header>
+        <mat-icon *ngIf="notification.status === 'Ativo'" color="primary">check_circle</mat-icon>
+        <mat-icon *ngIf="notification.status === 'Resolvido'" color="accent">done_all</mat-icon>
+        <mat-icon *ngIf="notification.status === 'Pendente'" color="warn">error</mat-icon>
+        <mat-card-title>Status: {{ notification.status }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p><strong>Endereço:</strong> {{ notification.endereco }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
