@@ -3,8 +3,8 @@
   justify-content: center;
 }
 
-.content-body{
-    display: flex;
+.content-body {
+  display: flex;
 }
 
 #historic-list {
@@ -16,7 +16,7 @@
 }
 
 #historic-list li {
-  background-color: aquamarine;
+  box-shadow: 2px 3px 5px #b79bff;
   padding: 8px;
   list-style-type: none;
   text-transform: capitalize;
@@ -24,11 +24,12 @@
   justify-content: space-between;
 }
 
-.left-side{
-    width: 70%;
+.left-side {
+  width: 70%;
 }
 
-.right-side {
+//Conteúdo da lateral Direita para Possibilidade de inclusão de gráfico
+/*.right-side {
     width: 30%;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -36,3 +37,4 @@
     display: flex;
     justify-content: center;
 }
+*/
