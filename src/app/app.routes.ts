@@ -7,6 +7,7 @@ import { HistoryComponent } from './features/analysis/history/history.component'
 import { NotificationsComponent } from './features/analysis/notifications/notifications.component';
 import { HomeComponent } from './features/home/home.component';
 import { NgModule } from '@angular/core';
+import { isAuthenticatedGuard } from './core/security/auth.guard';
 
 export const routes: Routes = [
   {
@@ -14,8 +15,9 @@ export const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'home',
+    path: '',
     component: HomeComponent,
+    canActivate: [isAuthenticatedGuard()],
     children: [
       {
         path: 'analysis',
