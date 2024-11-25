@@ -1,1 +1,18 @@
-<p>notifications works!</p>
+<div *ngFor="let notification of notifications" class="notification-card" (click)="goToDetails(notification.id)">
+    <mat-card>
+      <mat-card-header>
+        <div class="status-container">
+          <mat-icon *ngIf="notification.status === 'Ativo'" class="status-icon">warning</mat-icon>
+          <mat-icon *ngIf="notification.status === 'Resolvido'" class="status-icon">check_circle</mat-icon>
+          <mat-icon *ngIf="notification.status === 'Pendente'" class="status-icon">hourglass_empty</mat-icon>
+          <mat-card-title>Status: {{ notification.status }}</mat-card-title>
+        </div>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Endereço: {{ notification.endereco }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
+  
+  

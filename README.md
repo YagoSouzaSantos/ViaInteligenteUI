@@ -12,8 +12,8 @@ O projeto foi desenvolvido na versão do Angular 18.2.4
 1. **Clone o repositório**:
 
    ```bash
-   git clone https://github.com/YagoSouzaSantos/BurguerMania-UI.git
-   cd BurguerMania-UI
+   git clone https://github.com/YagoSouzaSantos/ViaInteligenteUI.git
+   cd ViaInteligenteUI
    ```
 
 2. **Instale o Angular CLI caso não tenha**:
